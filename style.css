@@ -1,0 +1,128 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: #dce2e7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Spartan', sans-serif;
+	font-size: 12px;
+}
+
+.player-container {
+	height: 500px;
+	width: 380px;
+	background-color: #f7f7f7;
+	border-radius: 20px;
+	box-shadow: 0 15px 30px 5px rgba(0, 0, 0, .3);
+}
+
+.img-container {
+	height: 300px;
+	width: 300px;
+	margin: 0 auto;
+	transform: translateY(-40px);
+}
+
+.img-container img {
+	height: 100%;
+	width: 100%;
+	border-radius: 20px;
+	object-fit: cover;
+	box-shadow: 0 5px 30px 5px rgba(0, 0, 0, .5);
+}
+
+h2 {
+	font-size: 25px;
+	text-align: center;
+	margin: 0;
+}
+
+h3 {
+	color: #f6123f;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 400;
+	margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+	background: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 40px 20px;
+	height: 4px;
+	width: 90%;
+}
+
+.progress {
+	background: #c5c5c6;
+	border-radius: 5px;
+	height: 100%;
+	/* change this to show progress */
+	width: 66%;
+	transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+	position: relative;
+	margin: 0 auto;
+	top: -25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+	margin: 0 auto;
+	text-align: center;
+	transform: translateY(-20px);
+}
+
+.fas {
+	font-size: 30px;
+	color: black;
+	margin-right: 30px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.fas:hover {
+	color: rgb(102, 102, 102);
+}
+.main-button {
+	font-size: 40px;
+	position: relative;
+	top: 3px;
+}
+
+#next {
+	margin-right: 0px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+	.player-container {
+		width: 85vw;
+	}
+	.img-container {
+		width: 80%;
+		height: 270px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+}
