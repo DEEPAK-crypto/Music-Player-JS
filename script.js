@@ -17,9 +17,9 @@ const songs = [
 		artist: 'WILDES'
 	},
 	{
-		name: 'Blinding Lights',
-		displayName: 'Blinding Lights',
-		artist: 'The Weeknd'
+		name: 'Wonderful Tonight',
+		displayName: 'Wonderful Tonight',
+		artist: 'Eric Clapton'
 	},
 	{
 		name: 'I Just Died In Your Arms',
@@ -65,7 +65,7 @@ function loadSong(song) {
 	image.src = `img/${song.name}.jpg`;
 }
 
-let songIndex = 0;
+let songIndex = 1;
 
 function nextSong() {
 	songIndex++;
@@ -82,7 +82,7 @@ function prevSong() {
 	playSong();
 }
 
-loadSong(songs[4]);
+loadSong(songs[1]);
 
 function updateProgressBar(e) {
 	if (isPlaying) {
