@@ -7,7 +7,7 @@ html {
 body {
 	margin: 0;
 	min-height: 100vh;
-	background: #dce2e7;
+	background: rgb(32, 32, 32);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,18 +16,21 @@ body {
 }
 
 .player-container {
-	height: 500px;
-	width: 380px;
+	height: 657px;
+
+	width: 375px;
 	background-color: #f7f7f7;
-	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 	box-shadow: 0 15px 30px 5px rgba(0, 0, 0, .3);
 }
 
 .img-container {
-	height: 300px;
-	width: 300px;
+	height: 270px;
+	width: 270px;
 	margin: 0 auto;
-	transform: translateY(-40px);
+	margin-top: 50px;
+	margin-bottom: 55px;
 }
 
 .img-container img {
@@ -36,6 +39,11 @@ body {
 	border-radius: 20px;
 	object-fit: cover;
 	box-shadow: 0 5px 30px 5px rgba(0, 0, 0, .5);
+	transition: all .5s;
+}
+
+.img-play {
+	transform: scale(1.16);
 }
 
 h2 {
@@ -48,22 +56,23 @@ h3 {
 	color: #f6123f;
 	font-size: 20px;
 	text-align: center;
-	font-weight: 400;
+	font-weight: 500;
 	margin: 5px 0 0;
 }
 
 /* Progress */
 .progress-container {
-	background: #fff;
+	background: #e4e4e5;
 	border-radius: 5px;
 	cursor: pointer;
-	margin: 40px 20px;
+	margin: 25px auto;
+	margin-bottom: 65px;
 	height: 4px;
-	width: 90%;
+	width: 80%;
 }
 
 .progress {
-	background: #c5c5c6;
+	background: #b4b4b4;
 	border-radius: 5px;
 	height: 100%;
 	/* change this to show progress */
@@ -72,9 +81,10 @@ h3 {
 }
 
 .duration-wrapper {
+	font-size: 12px;
 	position: relative;
 	margin: 0 auto;
-	top: -25px;
+	top: 15px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -87,9 +97,9 @@ h3 {
 }
 
 .fas {
-	font-size: 30px;
+	font-size: 25px;
 	color: black;
-	margin-right: 30px;
+	margin-right: 50px;
 	cursor: pointer;
 	-webkit-user-select: none;
 	user-select: none;
@@ -99,7 +109,7 @@ h3 {
 	color: rgb(102, 102, 102);
 }
 .main-button {
-	font-size: 40px;
+	font-size: 35px;
 	position: relative;
 	top: 3px;
 }
@@ -107,22 +117,75 @@ h3 {
 #next {
 	margin-right: 0px;
 }
+.volume-container {
+	width: 300px;
+	margin: 0 auto;
+}
+.slider-container {
+	position: relative;
+	width: 260px;
+	margin: 0 auto;
+}
+.slider-container .bar {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 5px;
+	width: 260px;
+	height: 4px;
+	background-color: #e4e4e5;
+	border-radius: 200px;
+	overflow: hidden;
+}
+.slider-container .bar .fill {
+	display: block;
+	width: 20%;
+	height: 100%;
+	background-color: #b4b4b4;
+}
+input[type="range"] {
+	position: relative;
+	width: 260px;
+	z-index: 2;
+	height: 4px;
+	border-radius: 200px;
+	outline: none;
+	-webkit-appearance: none;
+	background-color: transparent;
+}
 
+input[type="range"]::-webkit-slider-thumb {
+	width: 20px;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 20px;
+	background: white;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .8), inset 0 0 0 10px white;
+	border-radius: 50%;
+}
+
+.volume-wrapper {
+	width: 310px;
+	font-size: 8px;
+	position: relative;
+	margin: 0 auto;
+	top: -14px;
+	display: flex;
+	justify-content: space-between;
+}
+.volume-wrapper .fas {
+	margin-right: 0px;
+	font-size: 15px;
+}
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
 	.player-container {
-		width: 85vw;
+		position: absolute;
+		bottom: 0;
 	}
-	.img-container {
-		width: 80%;
-		height: 270px;
-	}
-
-	h2 {
-		font-size: 20px;
-	}
-
-	h3 {
-		font-size: 15px;
+}
+@media screen and (min-width: 376px) {
+	.player-container {
+		border-radius: 20px;
 	}
 }
