@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <link rel="icon" href="./favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,17 +14,19 @@
 <body>
 
     <div class="player-container">
+        <img class="mobile" src="./img/img.png" alt="">
+        <div class="background"></div>
         <div class="img-container">
-            <img src="./img/Bare.jpg" alt="">
+            <img class="img" src="./img/With Or Without You.jpg" alt="">
         </div>
-        <h2 id="title">Bare</h2>
-        <h3 id="artist">WILDES</h3>
-        <audio src="./music/Bare.mp3"></audio>
+        <h2 id="title">With Or Without You</h2>
+        <h3 id="artist">U2</h3>
+        <audio src="./music/With Or Without You.mp3"></audio>
         <div class="progress-container" id="progress-container">
             <div class="progress" id="progress"> </div>
             <div class="duration-wrapper">
                 <span class="" id="current-time">0.00</span>
-                <span class="duration">4.06</span>
+                <span class="duration" id='duration'>4.02</span>
             </div>
 
         </div>
@@ -37,7 +39,7 @@
         <div class="volume-container" id="volume-container">
             <div class="slider-container">
                 <span class="bar"><span class="fill"></span> </span>
-                <input class="volume slider" id="volume" type="range" min="1" max="100" value="0">
+                <input class="volume slider" id="volume" type="range" min="1" max="100" value="70">
             </div>
 
             <div class="volume-wrapper">
